@@ -6,7 +6,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
 	res.body.message = "hi";
-	res.send("test");
 })
 
 app.post('/chatbot', (req, res) => {
