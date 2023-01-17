@@ -5,7 +5,7 @@ app.use(express.json()); // read JSON BODY
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-	res.body.message = "hi";
+	res.send("TEST");
 })
 
 app.post('/chatbot', (req, res) => {
