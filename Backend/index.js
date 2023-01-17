@@ -4,6 +4,11 @@ const app = express();
 app.use(express.json()); // read JSON BODY
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+	res.body.message = "hi";
+	res.send("test");
+})
+
 app.post('/chatbot', (req, res) => {
 	res.header('Access-Control-Allow-Origin', '*');
 	const message = req.body.message;
