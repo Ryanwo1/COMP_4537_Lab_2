@@ -5,6 +5,7 @@ app.use(express.json()); // read JSON BODY
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
+	res.header('Access-Control-Allow-Origin', '*');
 	res.send("TEST");
 })
 
