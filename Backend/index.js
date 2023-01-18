@@ -1,10 +1,11 @@
 const express = require('express');
 const cors = require('cors');
-app.use(cors());
+
 
 const app = express(); 
 app.use(express.json()); // read JSON BODY
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get('/', (req, res) => {
 	res.header('Access-Control-Allow-Origin', '*');
