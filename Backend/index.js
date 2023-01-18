@@ -7,11 +7,6 @@ app.use(express.json()); // read JSON BODY
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/', (req, res) => {
-	res.header('Access-Control-Allow-Origin', '*');
-	res.send("TEST");
-})
-
 app.post('/chatbot', (req, res) => {
 	res.header('Access-Control-Allow-Origin', '*');
 	const message = req.body.message;
